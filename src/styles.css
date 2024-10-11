@@ -1,0 +1,10 @@
+.cursor {
+    cursor: pointer;
+  }
+
+  .rtl-text {
+    direction: rtl;
+}
+.background{
+  background-color: rgb(0, 0, 0);
+}

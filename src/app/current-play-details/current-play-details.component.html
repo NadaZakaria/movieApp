@@ -1,0 +1,29 @@
+<section>
+    <div class="container mt-5">
+        <div class="row">
+            <h2>Current Playing</h2>
+            <div class="col-md-3 gy-3" *ngFor="let movie of currentMovies | paginate: { id: 'currentMovies',
+            itemsPerPage: pageSize,
+            currentPage: page,
+            totalItems: total }" >
+                <img [src]="imgPrefix + movie.poster_path" width="100%" class="rounded-2" [routerLink]="['/movieDetails', movie.id]" >
+            </div>
+        </div>
+    </div>
+</section>
+
+<div class="d-flex justify-content-center mt-5">
+    <pagination-controls  id="currentMovies"
+                      (pageChange)="pageChanged($event)"
+                      (pageBoundsCorrection)="pageChanged($event)"
+                      [maxSize]="9"
+                      [directionLinks]="true"
+                      [autoHide]="true"
+                      [responsive]="true"
+                      previousLabel="Previous"
+                      nextLabel="Next"
+                      screenReaderPaginationLabel="Pagination"
+                      screenReaderPageLabel="page"
+                      screenReaderCurrentLabel="You're on page">
+    </pagination-controls>
+</div>

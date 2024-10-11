@@ -1,0 +1,10 @@
+
+.home{
+  background-size: cover;
+  background-position: center
+}
+.slider{
+  position: absolute;
+  bottom: 2%;
+
+}

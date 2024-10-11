@@ -1,0 +1,15 @@
+
+<section  [ngStyle]="{'background-image': 'linear-gradient(rgba(0, 0, 0, 0.85)0% 100%), url('+getBackgroundImage()+')'}">
+
+    <div class=" container vh-100 d-flex justify-content-center align-items-center">
+        <div class="row d-flex align-items-center">
+                <div class="col-md-4">
+                    <img [src]="imgPrefix + movieDetails.poster_path"  class="rounded-3 w-100" >
+                </div>
+                <div class="col-md-8 text-center text-white">
+                    <h1>{{movieDetails.original_title}}</h1>
+                    <p>{{movieDetails.overview}}</p>
+                </div>
+        </div>
+    </div>
+</section>

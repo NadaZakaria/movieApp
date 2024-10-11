@@ -1,0 +1,19 @@
+<section class="vh-100 home" [ngStyle]="{'background-image':'linear-gradient(rgba(0,0,0,0.85) 0% 100%) , url('+updateBackground()+')'} ">
+    <div class="container-fluid slider">
+       <owl-carousel-o [options]="customOptions" (translated)="onSlideChange($event)">
+        <ng-container *ngFor="let movie of trendingMovies ">
+          <ng-template carouselSlide>
+            <img [src]=" imgPrefix + movie.poster_path" class="rounded-2" [alt]="movie.alt" [title]="movie.title" [routerLink]="['/movieDetails', movie.id]">
+          </ng-template>
+        </ng-container>
+      </owl-carousel-o>
+    </div>
+</section>
+
+
+<app-current-play></app-current-play>
+<app-top-rated></app-top-rated>
+<app-poupular></app-poupular>
+<app-coming-soon></app-coming-soon>
+
+

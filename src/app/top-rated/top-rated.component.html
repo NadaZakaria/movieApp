@@ -1,0 +1,15 @@
+<section class="background">
+    <div class="container py-5">
+        <div class="row">
+            <div class="d-flex justify-content-between">
+                <h2 class="text-white fw-bolder fs-1 ">Top Rated</h2>
+            </div>
+            <div class="col-md-3 gy-3" *ngFor="let movie of FirstFourTopRatedMovies">
+                <img [src]="imgPrefix + movie.poster_path" width="100%" class="rounded-2" [routerLink]="['/movieDetails', movie.id]" >
+            </div>
+            <div routerLink="/topRatedDetails" class="mt-3 d-flex justify-content-center">
+                <button class="btn-outline-light p-2 btn "> All top rated movies</button>
+            </div>
+        </div>
+    </div>
+</section>
